@@ -1,0 +1,210 @@
+/* Dutch Rabbit UI - Clean CSS Replacement */
+
+:root {
+  --primary: #ffbf00;
+  --bg: #131313;
+  --bg-light: #222222;
+  --text: #FFFFFF;
+  --accent: #f60;
+  --border-radius: 8px;
+  --max-width: 1024px;
+  --nav-bg: rgb(85, 50, 26);
+  --section-gap: 48px;
+}
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  margin: 0;
+  padding: 0;
+}
+
+.pry-btn {
+  display: inline-block;
+  text-decoration: none;
+  background: var(--primary);
+  color: #fff;
+  padding: 14px 32px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  border: none;
+  border-radius: var(--border-radius);
+  cursor: pointer;
+  transition: background 0.3s;
+  text-decoration: none;
+}
+
+.pry-btn:hover {
+  background: var(--accent);
+}
+
+.accent-btn {
+  display: inline-block;
+  text-decoration: none;
+  color: var(--primary);
+  padding: 14px 32px;
+  border: 2px solid var(--primary);
+  font-size: 1.2rem;
+  font-weight: bold;
+  border-radius: var(--border-radius);
+  cursor: pointer;
+  transition: background 0.3s, color 0.3s;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.accent-btn:hover {
+  background: var(--primary);
+  color: black;
+}
+
+.underline {
+  width: 200px;
+  height: 5px;
+  background: linear-gradient(to right, var(--primary), var(--primary), transparent);
+  margin-bottom: 25px;
+}
+
+.cols-2 {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  align-items: center;
+  max-width: var(--max-width);
+  margin: 0 auto;
+  gap: var(--section-gap);
+}
+
+.cols-2 img {
+  width: 100%;
+}
+
+.bg-light {
+  background: var(--bg-light);
+}
+
+header {
+  background: var(--nav-bg);
+  padding: 0 20px;
+}
+
+.nav {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 72px;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+.logo img {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+}
+
+.nav-links {
+  display: flex;
+  gap: 24px;
+}
+.nav-links a {
+  text-decoration: none;
+  color: var(--text);
+  font-weight: 600;
+}
+.nav-links a:hover {
+  color: var(--primary);
+}
+
+.hero {
+  max-width: var(--max-width);
+  margin: var(--section-gap) auto;
+  padding: 0 20px;
+}
+.hero img {
+  width: 100%;
+  height: auto;
+}
+.hero h1 {
+  font-size: 2.8rem;
+  margin: 0 0 16px;
+  color: #e47a00;
+}
+.hero p {
+  font-size: 1.25rem;
+  margin-bottom: 32px;
+}
+
+section {
+  padding: var(--section-gap) 20px;
+}
+
+section h2 {
+  color: #ec9408;
+  font-size: 3rem;
+  margin: 0;
+}
+section p {
+  font-size: 1.5rem;
+  margin-block: 0 18px;
+}
+
+.content {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: var(--section-gap) 0;
+}
+#tokenomics h2 {
+  text-align: center;
+}
+
+li, dd, dt {
+  list-style: none;
+  margin: 0;
+}
+
+.box {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.box li {
+  border: 2px solid var(--accent);
+  text-align: center;
+  padding: 20px 8px;
+}
+
+footer {
+  background: #262626;
+  color: #fff;
+  text-align: center;
+  padding: 28px 0 22px 0;
+  font-size: 1rem;
+  margin-top: 60px;
+}
+
+@media (max-width: 600px) {
+  .nav {
+    flex-direction: column;
+    height: auto;
+    gap: 12px;
+  }
+  .hero h1 {
+    font-size: 2rem;
+  }
+
+  .nav-links {
+    gap: 10px;
+  }
+
+  .cols-2 {
+    grid-template-columns: 1fr;
+  }
+}
