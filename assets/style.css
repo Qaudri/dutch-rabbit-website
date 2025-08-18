@@ -133,7 +133,7 @@ header {
   height: auto;
 }
 .hero h1 {
-  font-size: 2.8rem;
+  font-size: 3rem;
   margin: 0 0 16px;
   color: #e47a00;
 }
@@ -148,7 +148,7 @@ section {
 
 section h2 {
   color: #ec9408;
-  font-size: 3rem;
+  font-size: 2.8rem;
   margin: 0;
 }
 section p {
@@ -165,22 +165,85 @@ section p {
   text-align: center;
 }
 
-li, dd, dt {
+ul, li, dd, dt {
   list-style: none;
   margin: 0;
+  padding: 0;
 }
 
 .box {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-}
-
-.box li {
   border: 2px solid var(--accent);
+  border-radius: 8px;
   text-align: center;
-  padding: 20px 8px;
+  margin-top: 30px;
+
+  li:not(:last-child) {
+   border-right: 2px solid var(--accent);
+  }
+
+  li {
+    padding: 20px 8px;
+  }
 }
 
+.box dd {
+  font-weight: 800;
+  margin-bottom: 8px;
+}
+
+.circles {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  place-content: center;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  margin-top: 48px;
+}
+
+.circles li {
+  background: var(--accent);
+  border-radius: 50%;
+  height: 180px;
+  aspect-ratio: 1;
+  display: grid;
+  place-content: center;
+  margin: 0 auto;
+}
+
+.circles dd {
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+#features {
+  text-align: center;
+  
+  p {
+    font-size: 1rem;
+    max-width: 768px;
+    margin: 12px auto;
+  }
+}
+
+.features{
+  li {
+    background: var(--bg-light);
+    margin-top: 20px;
+    padding: 30px;
+    border-radius: 16px;
+  }
+
+  dt {
+    font-size: 2rem;
+    color: var(--primary);
+    font-weight: 700;
+    margin-bottom: 12px;
+  }
+} 
 footer {
   background: #262626;
   color: #fff;
@@ -200,11 +263,39 @@ footer {
     font-size: 2rem;
   }
 
+  section {
+    h2 {
+      font-size: 2rem;
+    }
+
+    p {
+      font-size: 1rem
+    }
+  }
+
   .nav-links {
     gap: 10px;
   }
 
   .cols-2 {
     grid-template-columns: 1fr;
+  }
+
+  .box {
+    grid-template-columns: repeat(2, 1fr);
+
+    li:nth-child(even) {
+      border: none;
+    }
+    li {
+      border-bottom: none;
+    }
+    li:nth-child(-n+2) {
+      border-bottom: 2px solid var(--accent);
+    }
+  }
+
+  .circles {
+    grid-template-columns: repeat(2, 1fr);
   }
 }
