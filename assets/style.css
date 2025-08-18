@@ -83,6 +83,13 @@ body {
   background: var(--bg-light);
 }
 
+.socials {
+  margin-top: 24px;
+  display: flex;
+  gap: 24px;
+  align-items: center;
+}
+
 header {
   background: var(--nav-bg);
   padding: 0 20px;
@@ -220,6 +227,7 @@ ul, li, dd, dt {
 }
 
 #features {
+  padding: var(--section-gap);
   text-align: center;
   
   p {
@@ -243,14 +251,55 @@ ul, li, dd, dt {
     font-weight: 700;
     margin-bottom: 12px;
   }
-} 
-footer {
-  background: #262626;
-  color: #fff;
+}
+
+#roadmap{
+  .roadmap-content {
+    max-width: var(--max-width);
+    margin: 0 auto;
+    padding: var(--section-gap) 0;
+  }
+
+  h2 {
+    text-align: center;
+    margin-bottom: 12px;
+  }
+
+  .roadmap {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--section-gap);
+    margin-top: 24px;
+  }
+
+  ul > div {
+    background: var(--bg);
+    padding: 30px;
+    border-radius: 16px;
+  }
+
+  ul li {
+    list-style: disc;
+    list-style-position: inside;
+  }
+}
+
+.final {
   text-align: center;
-  padding: 28px 0 22px 0;
-  font-size: 1rem;
-  margin-top: 60px;
+  img {
+    width: 200px;
+    margin: 0 auto;
+  }
+  p {
+    max-width: 768px;
+    font-size: 1rem;
+    margin: 0 auto;
+  }
+}
+
+
+footer {
+
 }
 
 @media (max-width: 600px) {
@@ -297,5 +346,9 @@ footer {
 
   .circles {
     grid-template-columns: repeat(2, 1fr);
+  }
+
+  .roadmap {
+    grid-template-columns: 1fr !important;
   }
 }
