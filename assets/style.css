@@ -26,7 +26,7 @@ body {
   background: var(--primary);
   color: #fff;
   padding: 14px 32px;
-  font-size: 1.2rem;
+  font-size: 1rem;
   font-weight: bold;
   border: none;
   border-radius: var(--border-radius);
@@ -43,9 +43,9 @@ body {
   display: inline-block;
   text-decoration: none;
   color: var(--primary);
-  padding: 14px 32px;
+  padding: 12px 32px;
   border: 2px solid var(--primary);
-  font-size: 1.2rem;
+  font-size: 1rem;
   font-weight: bold;
   border-radius: var(--border-radius);
   cursor: pointer;
@@ -295,6 +295,14 @@ ul, li, dd, dt {
     font-size: 1rem;
     margin: 0 auto;
   }
+
+  .logo {
+    display: flex;
+    width: fit-content;
+    justify-content: center;
+    margin: 0 auto;
+    margin-bottom: 12px;
+  }
 }
 
 
@@ -383,5 +391,9 @@ footer {
   #benefits img {
     width: 200px;
     margin: auto;
+  }
+
+  #about img {
+    display: none;
   }
 }
