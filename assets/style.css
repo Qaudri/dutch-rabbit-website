@@ -207,14 +207,14 @@ ul, li, dd, dt {
   text-align: center;
   justify-content: center;
   align-items: center;
-  gap: 12px;
+  gap: var(--section-gap);
   margin-top: 48px;
 }
 
 .circles li {
   background: var(--accent);
   border-radius: 50%;
-  height: 180px;
+  height: 150px;
   aspect-ratio: 1;
   display: grid;
   place-content: center;
