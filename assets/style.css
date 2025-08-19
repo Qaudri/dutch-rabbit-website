@@ -379,4 +379,9 @@ footer {
       gap: 12px;
     }
   }
+
+  #benefits img {
+    width: 200px;
+    margin: auto;
+  }
 }
