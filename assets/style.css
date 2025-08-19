@@ -299,7 +299,23 @@ ul, li, dd, dt {
 
 
 footer {
+  .footer-content {
+    max-width: var(--max-width);
+    margin: 0 auto;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
 
+  .socials {
+    scale: .8;
+  }
+
+  .logo {
+    color: white;
+    text-decoration: none;
+  }
 }
 
 @media (max-width: 600px) {
@@ -350,5 +366,16 @@ footer {
 
   .roadmap {
     grid-template-columns: 1fr !important;
+  }
+
+  .footer-content {
+    flex-direction: column;
+
+    .nav-links {
+      margin-top: 24px;
+      flex-direction: column;
+      align-items: center;
+      gap: 12px;
+    }
   }
 }
