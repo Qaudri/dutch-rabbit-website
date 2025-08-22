@@ -326,6 +326,10 @@ footer {
   }
 }
 
+.mobile{
+  display: none;
+}
+
 @media (max-width: 600px) {
   .nav {
     flex-direction: column;
@@ -397,7 +401,8 @@ footer {
     display: none;
   }
 
-  strong {
-    font-size: .8rem;
+  .mobile {
+    display: block;
   }
+
 }
