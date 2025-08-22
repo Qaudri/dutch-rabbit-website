@@ -396,4 +396,8 @@ footer {
   #about img {
     display: none;
   }
+
+  strong {
+    font-size: .8rem;
+  }
 }
